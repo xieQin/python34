@@ -5,7 +5,7 @@ def gold_room():
 
 	next = input("> ")
 	if "0" in next or "1" in next:
-			how_much = in(next)
+			how_much = input(next)
 	else:
 		dead("Man, learn to type a number.")
 
