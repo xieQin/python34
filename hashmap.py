@@ -34,7 +34,7 @@ def set(aMap, key, value):
 
 def delete(aMap, key):
 	bucket = get_bucket(aMap, key)
-	for i in xrange(len(bucket)):
+	for i in range(len(bucket)):
 		k, v = bucket[i]
 		if key == k:
 			del bucket[i]

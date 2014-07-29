@@ -30,3 +30,9 @@ hashmap.list(jazz)
 print("** Test Delete of Missing Key")
 hashmap.delete(jazz, "Charles Mingus")
 
+# class MyStuff(object):
+# 	def _init_(self):
+# 		self.tangerine = "Init"
+
+# 	def apple(self):
+# 		print("I'm apples!")
