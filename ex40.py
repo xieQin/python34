@@ -57,11 +57,11 @@ def convert(snippet, phrase):
 
 try:
 	while True:
-		snippets = PHRASES.keys()
+		snippets = list(PHRASES.keys())
 		random.shuffle(snippets)
 
 		for snippet in snippets:
-			phrase = PHRASES[snippet]
+			phrase = PHRASES[snippets]
 			question, answer = convert(snippet, phrase)
 			if PHRASES_FIRST:
 				question, answer = answer, question
