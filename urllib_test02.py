@@ -1,5 +1,6 @@
-import urllib.request
-from urllib.parse import urlencode
+import urllib.request, urllib.parse, urllib.error
+# from urllib.parse import urlencode
+# from urllib.request import Request
 
 url = 'http://www.baidu.com'
 
@@ -9,7 +10,9 @@ values = {
 	'language': 'Python'
 }
 
-data = urlencode(values)
-req = urllib.request(url, data)
+data = urllib.parse.urlencode(values).encode('utf-8')
+# binary_data = data.encode(encoding)
+req = urllib.request.Request(url, data)
+# req = urllib.request.Request(url, binary_data)
 response = urllib.request.urlopen(req)
 the_page = response.read()
